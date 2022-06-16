@@ -1,6 +1,7 @@
 import React from 'react';
 import './styles.css';
-import { Card } from 'semantic-ui-react'
+import { Card } from 'semantic-ui-react';
+import moment from 'moment';
 
 const CardExampleCard = ({weatherData}) => (
   <Card>
@@ -10,6 +11,8 @@ const CardExampleCard = ({weatherData}) => (
         <p>Sunrise: {new Date(weatherData.sys.sunrise * 1000).toLocaleTimeString('en-IN')}</p>
         <p>Sunset: {new Date(weatherData.sys.sunset * 1000).toLocaleTimeString('en-IN')}</p>
         <p>Description: {weatherData.weather[0].description}</p>
+        <p>Day: {moment().format('dddd')}</p>
+        <p>Date: {moment().format('LL')}</p>
     </Card.Content>
   </Card>
 )
