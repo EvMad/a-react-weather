@@ -33,7 +33,9 @@ export default function App() {
       {(typeof data.main != 'undefined') ? (
         <Weather weatherData={data}/>
       ): (
-        <div></div>
+        <div> <Dimmer active>
+        <Loader>Loading..</Loader>
+      </Dimmer></div>
       )}
      
       </div>
