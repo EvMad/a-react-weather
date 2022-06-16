@@ -1,5 +1,5 @@
 import React from 'react';
-import 'weather.css';
+import './weather.css';
 import moment from 'moment';
 import { Button } from 'semantic-ui-react';
 
